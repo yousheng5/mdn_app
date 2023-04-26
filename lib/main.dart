@@ -33,14 +33,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('mdn_demo'),
+          title: const Text('mdsn_demo'),
         ),
         body: Center(
-          child: OutlinedButton(
+          child: ElevatedButton(
             onPressed: () {
               //何か入れる
             },
-            child: Text('押す'),
+            child: const Text('次の画面'),
           ),
         ));
   }
