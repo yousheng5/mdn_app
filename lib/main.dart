@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               //何か入れる
             },
-            child: const Text('次の画面'),
+            child: const Text('今日は伊地知基いない'),
           ),
         ));
   }
