@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'mdn',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
       home: const MyHomePage(),
     );
@@ -32,16 +32,27 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('mdsn_demo'),
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              //何か入れる
-            },
-            child: const Text('次の画面'),
+      appBar: AppBar(
+        title: Text('mdn'),
+      ),
+      body: Center(
+        child: // Flutter1.22以降のみ
+            ElevatedButton(
+          child: const Text('Btn'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.white,
+            onPrimary: Colors.black,
+            shape: const CircleBorder(
+              side: BorderSide(
+                color: Colors.black,
+                width: 1,
+                style: BorderStyle.solid,
+              ),
+            ),
           ),
-        ));
+          onPressed: () {},
+        ),
+      ),
+    );
   }
 }
