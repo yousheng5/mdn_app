@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,14 +34,27 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('ログイン'),
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {},
-            child: const Text('新規登録の方はこちらへ'),
+      appBar: AppBar(
+        title: Text('mdn'),
+      ),
+      body: Center(
+        child: // Flutter1.22以降のみ
+            ElevatedButton(
+          child: const Text('Btn'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.white,
+            onPrimary: Colors.black,
+            shape: const CircleBorder(
+              side: BorderSide(
+                color: Colors.black,
+                width: 1,
+                style: BorderStyle.solid,
+              ),
+            ),
           ),
-        ));
+          onPressed: () {},
+        ),
+      ),
+    );
   }
 }

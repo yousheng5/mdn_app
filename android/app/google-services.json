@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "477950694882",
+    "project_id": "mdnapp-6eb5c",
+    "storage_bucket": "mdnapp-6eb5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477950694882:android:718e90bcddcdf4a69455bb",
+        "android_client_info": {
+          "package_name": "jp.yousheng5.mdn_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477950694882-im47d8ggnfq46su351eh6mcilqnuo6ln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd5SiVF_c2H_N5VNkM53VyfkSKucmxDjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477950694882-glslhma60ao3m8946ueqn0a324updfaj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "477950694882-r8e4i6e6vjev0p8tva24m9st8v1aj2n8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.yousheng5.mdnApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
