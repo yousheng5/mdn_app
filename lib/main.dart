@@ -1,60 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'package:mdn_app/message.dart';
+import 'package:mdn_app/friend.dart';
+import 'package:mdn_app/profile.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const BottomNavigationBarExampleApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BottomNavigationBarExampleApp extends StatelessWidget {
+  const BottomNavigationBarExampleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'mdn',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: const MyHomePage(),
+    return const MaterialApp(
+      home: BottomNavigationBarExample(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({
-    super.key,
-  });
+class BottomNavigationBarExample extends StatefulWidget {
+  const BottomNavigationBarExample({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<BottomNavigationBarExample> createState() =>
+      _BottomNavigationBarExampleState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _BottomNavigationBarExampleState
+    extends State<BottomNavigationBarExample> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    pageMessage,
+    pageFriends,
+    const PageProfile()
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('mdn'),
-      ),
-      body: Center(
-        child: // Flutter1.22以降のみ
-            ElevatedButton(
-          child: const Text('Btn'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
-            onPrimary: Colors.black,
-            shape: const CircleBorder(
-              side: BorderSide(
-                color: Colors.black,
-                width: 1,
-                style: BorderStyle.solid,
-              ),
-            ),
-          ),
-          onPressed: () {},
+        appBar: AppBar(
+          title: const Text('ログイン'),
         ),
-      ),
-    );
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text('新規登録の方はこちらへ'),
+          ),
+        ));
   }
 }
